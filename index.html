@@ -1,0 +1,54 @@
+<html>
+    <head><script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script></head>
+    <body>
+        <a-scene background="color:#000000">
+            <a-entity position="0 0 3" rotation="0 0 0"><a-camera></a-camera></a-entity>
+            <a-sphere position="0 1.5 0" radius="0.5" rotation="0 -80 0" color="#4FB0FF" src="https://static.wixstatic.com/media/fe932a_b020563fc0434161a6c78175f52befaa~mv2.png/v1/fill/w_1518,h_606,al_c,q_90,enc_auto/fe932a_b020563fc0434161a6c78175f52befaa~mv2.png"></a-sphere>
+            <!--doremon propellerhat-->
+            <a-sphere position="0 2 0" radius="0.1" rotation="0 0 0" color="yellow"></a-sphere>
+            <a-entity position="0 0 0" rotation="0 0 0">
+                <a-cylinder radius="0.025" position="0 2 0" height="0.5" color="yellow">
+                    <a-entity position="0 0.22 0" rotation="0 0 90" animation="property:rotation;from:0 0 90;to:0 360 90;easing:linear;loop:true;dur:300">
+                        <a-cylinder radius="0.02" height="0.5" color="gray"></a-cylinder>
+                    </a-entity>
+                </a-cylinder>
+            </a-entity>
+            <!--Doremon body, arms, and legs-->
+            <!--Body-->
+            <a-entity>
+            <a-sphere color="#4FB0FF" radius="0.6" position="0 0.6 0">
+                <!--hands-->
+                <a-entity position="0.7 0 0.025" rotation="0 0 45">
+                    <a-cylinder color="#4FB0FF" radius="0.075" height="0.75">
+                        <a-entity position="0 -0.38 0">
+                            <a-sphere radius="0.125"></a-sphere>
+                        </a-entity>
+                    </a-cylinder>
+                </a-entity>
+                <a-entity position="-0.36 0.275 0.025" rotation="0 0 -45" animation="property:rotation;from:0 0 -45;to:0 0 -135;easing:linear;loop:true;dur:1000">
+                    <a-cylinder color="#4FB0FF" radius="0.075" height="1.5">
+                        <a-entity position="0 -0.76 0">
+                            <a-sphere radius="0.125"></a-sphere>
+                        </a-entity>
+                    </a-cylinder>
+                </a-entity>
+
+            </a-sphere>
+            </a-entity>
+            <!--Legs-->
+            <a-entity>
+                <a-cylinder radius="0.2" color="#4FB0FF" rotation="0 0 10" position="0.15 0 0" height="0.5">
+                    <a-entity position="0 -0.25 0"><a-torus rotation="90 0 0" radius="0.2" radius-tubular="0.02" segments-tubular="1000"></a-torus></a-entity>
+                </a-cylinder>
+            </a-entity>
+            <a-entity>
+                <a-cylinder radius="0.2" color="#4FB0FF" rotation="0 0 -10" position="-0.15 0 0" height="0.5">
+                    <a-entity position="0 -0.25 0"><a-torus rotation="90 0 0" radius="0.2" radius-tubular="0.02" segments-tubular="1000"></a-torus></a-entity>
+                </a-cylinder>
+            </a-entity>
+
+        </a-scene>
+    </body>
+</html>
+
+
